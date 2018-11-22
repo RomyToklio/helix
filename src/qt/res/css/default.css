@@ -2007,7 +2007,7 @@ Potentially match Web Wallet styling in future
 } */
 
 #BlockExplorer, #BlockExplorer QScrollArea *, #BlockExplorer #content {
-	background-color: #132232;
+	background-color: #fff;
 }
 
 QAbstractScrollArea::corner {
@@ -2016,7 +2016,7 @@ QAbstractScrollArea::corner {
 
 #MultiSendDialog #message, #MultisigDialog QScrollArea, #MultisigDialog #signButtonStatus, #MultisigDialog #createButtonStatus, #MultisigDialog #addMultisigStatus, #MultisigDialog #addAddressScrollArea {
 	border:0;
-	background-color: #132232;
+	background-color: #ffffff;
 }
 
 #txInputsScrollArea {
