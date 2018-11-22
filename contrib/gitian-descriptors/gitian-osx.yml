@@ -1,5 +1,5 @@
 --- 
-name: "helix-osx"
+name: "helix-osx-1.5"
 enable_cache: true
 suites:
 - "trusty"

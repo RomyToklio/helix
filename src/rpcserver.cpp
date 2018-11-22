@@ -323,7 +323,7 @@ static const CRPCCommand vRPCCommands[] =
         {"mining", "submitblock", &submitblock, true, true, false},
         {"mining", "reservebalance", &reservebalance, true, true, false},
 
-		#ifdef ENABLE_WALLET
+#ifdef ENABLE_WALLET
         /* Coin generation */
         {"generating", "getgenerate", &getgenerate, true, false, false},
         {"generating", "gethashespersec", &gethashespersec, true, false, false},

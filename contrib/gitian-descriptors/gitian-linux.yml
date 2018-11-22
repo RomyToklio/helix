@@ -1,5 +1,5 @@
 ---
-name: "helix-linux"
+name: "helix-linux-1.5"
 enable_cache: true
 suites:
 - "trusty"

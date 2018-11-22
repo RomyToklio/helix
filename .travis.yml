@@ -9,7 +9,7 @@ cache:
   - $HOME/.ccache
 env:
   global:
-    - MAKEJOBS=-j2
+    - MAKEJOBS=-j3
     - RUN_TESTS=true
     - CHECK_DOC=1
     - CHECK_LOGPRINT=1

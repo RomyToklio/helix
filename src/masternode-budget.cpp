@@ -1,6 +1,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017 The Helix developers
+// Copyright (c) 2017-2018 The Phore developers
+// Copyright (c) 2018 The Helix developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -40,7 +41,7 @@ int GetBudgetPaymentCycleBlocks()
     if (Params().NetworkID() == CBaseChainParams::MAIN) return 43200;
     //for testing purposes
 
-    return 144; //ten times per day
+    return 864; //ten times per day
 }
 
 bool IsBudgetCollateralValid(uint256 nTxCollateralHash, uint256 nExpectedHash, std::string& strError, int64_t& nTime, int& nConf, bool fBudgetFinalization)
@@ -177,7 +178,7 @@ void CBudgetManager::SubmitFinalBudget()
         // NOTE: 9 blocks for testnet is way to short to have any masternode submit an automatic vote on the finalized(!) budget,
         //       because those votes are only submitted/relayed once every 56 blocks in CFinalizedBudget::AutoCheck()
 
-        finalizationWindow = 64; // 56 + 4 finalization confirmations + 4 minutes buffer for propagation
+        finalizationWindow = 214; // 180 + 4 finalization confirmations + 5 minutes (30 blocks) buffer for propagation
     }
 
     int nFinalizationStart = nBlockStart - finalizationWindow;

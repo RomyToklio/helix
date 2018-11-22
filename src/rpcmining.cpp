@@ -101,15 +101,18 @@ UniValue getgenerate(const UniValue& params, bool fHelp)
         throw runtime_error(
             "getgenerate\n"
             "\nReturn if the server is set to generate coins or not. The default is false.\n"
-            "It is set with the command line argument -gen (or helix.conf setting gen)\n"
+            "It is set with the command line argument -gen (or phore.conf setting gen)\n"
             "It can also be set with the setgenerate call.\n"
             "\nResult\n"
             "true|false      (boolean) If the server is set to generate coins or not\n"
             "\nExamples:\n" +
             HelpExampleCli("getgenerate", "") + HelpExampleRpc("getgenerate", ""));
+
     LOCK(cs_main);
     return GetBoolArg("-gen", false);
 }
+
+
 UniValue setgenerate(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
@@ -130,17 +133,21 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
             "\nCheck the setting\n" + HelpExampleCli("getgenerate", "") +
             "\nTurn off generation\n" + HelpExampleCli("setgenerate", "false") +
             "\nUsing json rpc\n" + HelpExampleRpc("setgenerate", "true, 1"));
+
     if (pwalletMain == NULL)
         throw JSONRPCError(RPC_METHOD_NOT_FOUND, "Method not found (disabled)");
+
     bool fGenerate = true;
     if (params.size() > 0)
         fGenerate = params[0].get_bool();
+
     int nGenProcLimit = -1;
     if (params.size() > 1) {
         nGenProcLimit = params[1].get_int();
         if (nGenProcLimit == 0)
             fGenerate = false;
     }
+
     // -regtest mode: don't return until nGenProcLimit blocks are generated
     if (fGenerate && Params().MineBlocksOnDemand()) {
         int nHeightStart = 0;
@@ -148,6 +155,7 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
         int nHeight = 0;
         int nGenerate = (nGenProcLimit > 0 ? nGenProcLimit : 1);
         CReserveKey reservekey(pwalletMain);
+
         { // Don't keep cs_main locked
             LOCK(cs_main);
             nHeightStart = chainActive.Height();
@@ -160,6 +168,7 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
             CPubKey pubkey;
             if (!reservekey.GetReservedKey(pubkey))
                 throw JSONRPCError(RPC_INTERNAL_ERROR, "Wallet keypool empty");
+
             CScript scriptPubKey = CScript() << ToByteVector(pubkey) << OP_CHECKSIG;
             CBlockTemplate* pblocktemplate;
             try {
@@ -190,8 +199,10 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
         mapArgs["-genproclimit"] = itostr(nGenProcLimit);
         GenerateBitcoins(fGenerate, pwalletMain, nGenProcLimit);
     }
+
     return NullUniValue;
 }
+
 UniValue gethashespersec(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0)
@@ -203,6 +214,7 @@ UniValue gethashespersec(const UniValue& params, bool fHelp)
             "n            (numeric) The recent hashes per second when generation is on (will return 0 if generation is off)\n"
             "\nExamples:\n" +
             HelpExampleCli("gethashespersec", "") + HelpExampleRpc("gethashespersec", ""));
+
     if (GetTimeMillis() - nHPSTimerStart > 8000)
         return (int64_t)0;
     return (int64_t)dHashesPerSec;
@@ -223,7 +235,7 @@ UniValue getmininginfo(const UniValue& params, bool fHelp)
             "  \"currentblocktx\": nnn,     (numeric) The last block transaction\n"
             "  \"difficulty\": xxx.xxxxx    (numeric) The current difficulty\n"
             "  \"errors\": \"...\"          (string) Current errors\n"
-			"  \"generate\": true|false     (boolean) If the generation is on or off (see getgenerate or setgenerate calls)\n"
+            "  \"generate\": true|false     (boolean) If the generation is on or off (see getgenerate or setgenerate calls)\n"
             "  \"genproclimit\": n          (numeric) The processor limit for generation. -1 if no generation. (see getgenerate or setgenerate calls)\n"
             "  \"hashespersec\": n          (numeric) The hashes per second of the generation, or 0 if no generation.\n"
             "  \"pooledtx\": n              (numeric) The size of the mem pool\n"

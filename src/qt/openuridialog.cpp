@@ -1,7 +1,8 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017 The Helix developers
+// Copyright (c) 2017-2018 The Phore developers
+// Copyright (c) 2018 The Helix developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,6 +18,7 @@ OpenURIDialog::OpenURIDialog(QWidget* parent) : QDialog(parent),
                                                 ui(new Ui::OpenURIDialog)
 {
     ui->setupUi(this);
+    ui->uriEdit->setAttribute(Qt::WA_MacShowFocusRect, 0);
 #if QT_VERSION >= 0x040700
     ui->uriEdit->setPlaceholderText("helix:");
 #endif
