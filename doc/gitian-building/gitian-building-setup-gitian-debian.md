@@ -70,9 +70,9 @@ Clone the git repositories for helix and Gitian.
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/helixproject/helix
-git clone https://github.com/helixproject/gitian.sigs.git
-git clone https://github.com/helixproject/helix-detached-sigs.git
+git clone https://github.com/projecthelixcoin/helix
+git clone https://github.com/projecthelixcoin/gitian.sigs.git
+git clone https://github.com/projecthelixcoin/helix-detached-sigs.git
 ```
 
 Setting up the Gitian image
