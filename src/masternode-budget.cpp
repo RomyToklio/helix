@@ -915,10 +915,18 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
         return ((nSubsidy / 100) * 10) * 146;
     }
 
-    if (nHeight > 200 && nHeight <= 250000) {
-        return 0.77 * COIN * 1440 * 30;
-    }
-    return 1 * COIN * 1440 * 30;
+    if (nHeight > 200 && nHeight <= 90200) {
+        return 0 * COIN * 1440 * 30;
+    } else if (nHeight > 90201 && nHeight <= 525600) {
+        return 1.5 * COIN * 1440 * 30;
+    } else if (nHeight > 525601 && nHeight <= 1576800) {
+        return 1.35 * COIN * 1440 * 30;
+    } else if (nHeight > 1576801 && nHeight <= 2628000) {
+        return 0.81 * COIN * 1440 * 30;
+    } else if (nHeight > 2628001 && nHeight <= 58545900) {
+        return 0.42 * COIN * 1440 * 30;
+    } else	
+		return 0 * COIN * 1440 * 30;
 }
 
 void CBudgetManager::NewBlock()
