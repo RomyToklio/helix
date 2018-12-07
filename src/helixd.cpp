@@ -30,7 +30,7 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Phore (http://www.phore.io),
+ * This is the developer documentation of the reference client for an experimental new digital currency called Helix (https://www.helix-crypto.com/),
  * which enables instant payments to anyone, anywhere in the world. Phore uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
@@ -70,18 +70,18 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/phore.conf are parsed in qt/phore.cpp's main()
+    // If Qt is used, parameters/helix.conf are parsed in qt/helix.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
     if (mapArgs.count("-?") || mapArgs.count("-help") || mapArgs.count("-version")) {
-        std::string strUsage = _("Phore Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("Helix Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
 
         if (mapArgs.count("-version")) {
             strUsage += LicenseInfo();
         } else {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  phored [options]                     " + _("Start Phore Core Daemon") + "\n";
+                        "  phored [options]                     " + _("Start Helix Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -120,7 +120,7 @@ bool AppInit(int argc, char* argv[])
 #ifndef WIN32
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon) {
-            fprintf(stdout, "Phore server starting\n");
+            fprintf(stdout, "Helix server starting\n");
 
             // Daemonize
             pid_t pid = fork();
