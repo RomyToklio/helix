@@ -1,5 +1,5 @@
 ---
-name: "helix-win-1.5"
+name: "helix-win-1.1"
 enable_cache: true
 suites:
 - "trusty"
