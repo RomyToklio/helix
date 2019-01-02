@@ -964,16 +964,16 @@ QDialog#HelpMessageDialog QScrollBar:vertical,
 QDialog#HelpMessageDialog QScrollBar:horizontal {
 	border: 0;
 }
-/* About Phore Dialog */
+/* About Helix Dialog */
 
 QDialog#AboutDialog QLabel#label,
 QDialog#AboutDialog QLabel#copyrightLabel,
 QDialog#AboutDialog QLabel#label_2 {
-	/* About Phore Contents */
+	/* About Helix Contents */
 	margin-left: 10px;
 }
 QDialog#AboutDialog QLabel#label_2 {
-	/* Margin for About Phore text */
+	/* Margin for About Helix text */
 	margin-right: 10px;
 }
 /* Edit Address Dialog */

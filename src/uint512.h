@@ -1,5 +1,5 @@
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2015-2017 The Phore developers
+// Copyright (c) 2015-2017 The Helix developers
 // Copyright (c) 2018 The Helix developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
