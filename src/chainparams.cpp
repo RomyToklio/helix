@@ -177,8 +177,11 @@ public:
         assert(hashGenesisBlock == uint256("0x79a3c45d6e2760efb4d6de76d34b1f4833ba919bc114e1da0f671b1700a78f08"));
         assert(genesis.hashMerkleRoot == uint256("0x210fa744202cef1c9248d9f82efadaa1387341e5c4b85b7a87ae56866514ef27"));
 
-        vSeeds.push_back(CDNSSeedData("0", "seed.helix-crypto.com")); // run by Crazy(Danny)
-//        vSeeds.push_back(CDNSSeedData("1", "x")); // run by 
+        vSeeds.push_back(CDNSSeedData("Seed1", "seed1.helix-crypto.nl"));
+        vSeeds.push_back(CDNSSeedData("Seed2", "seed2.helix-crypto.nl"));
+        vSeeds.push_back(CDNSSeedData("Seed3", "seed3.helix-crypto.nl"));
+        vSeeds.push_back(CDNSSeedData("Seed4", "seed4.helix-crypto.nl"));
+        vSeeds.push_back(CDNSSeedData("Seed5", "seed5.helix-crypto.nl"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40); // Testnet helix addresses start with 'H'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
