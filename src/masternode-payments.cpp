@@ -588,8 +588,6 @@ std::string CMasternodeBlockPayees::GetRequiredPaymentsString()
         if (ret != "Unknown") {
             ret += ", " + EncodeDestination(address) + ":" + std::to_string(payee.nVotes);
         } else {
-        } else {
-            ret = EncodeDestination(address) + ":" + boost::lexical_cast<std::string>(payee.nVotes);
             ret = EncodeDestination(address) + ":" + std::to_string(payee.nVotes);
         }
     }
