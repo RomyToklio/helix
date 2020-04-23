@@ -228,7 +228,7 @@ public:
     }
 };
 
-/** RAII-style semaphore lock */
+/** RAII-style Semaphore lock */
 class CSemaphoreGrant
 {
 private:

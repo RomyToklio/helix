@@ -32,11 +32,11 @@ https://bitcointalk.org/index.php?topic=4956675.0
 <th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Proof of Work</th>
 <tr><td>201-90.200</td><td>111.0 HLIX</td><td>0.0 HLIX</td><td>111.0 HLIX</td></tr>
 <th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Stakers</th>
-<tr><td>90.201-525,600</td><td>15.0 HLIX</td><td>8.1 HLIX</td><td>5.4 HLIX</td></tr>
-<tr><td>525,601-1,576,800</td><td>13.5 HLIX</td><td>7.29 HLIX</td><td>4.86 HLIX</td></tr>
-<tr><td>1,576,801-2,628,000</td><td>10.8 HLIX</td><td>5.83 HLIX</td><td>3.89 HLIX</td></tr>
-<tr><td>2,628,001-58,545,900</td><td>8.1 HLIX</td><td>4.37 HLIX</td><td>2.92 HLIX</td></tr>
-<tr><td>58,545,901-58,545,902</td><td>4.2 HLIX</td><td>2.27 HLIX</td><td>1.51 HLIX</td></tr>
+<tr><td>90.201-525,600</td><td>15.0 HLIX</td><td>9 HLIX</td><td>6 HLIX</td></tr>
+<tr><td>525,601-1,576,800</td><td>13.5 HLIX</td><td>8.1 HLIX</td><td>5.4 HLIX</td></tr>
+<tr><td>1,576,801-2,628,000</td><td>10.8 HLIX</td><td>6.48 HLIX</td><td>4.32 HLIX</td></tr>
+<tr><td>2,628,001-58,545,900</td><td>8.1 HLIX</td><td>4.86 HLIX</td><td>3.24 HLIX</td></tr>
+<tr><td>58,545,901-58,545,902</td><td>4.2 HLIX</td><td>2.5 HLIX</td><td>1.7 HLIX</td></tr>
 <tr><td>> 58,545,902</td><td>0 HLIX</td><td>0 HLIX</td><td>0 HLIX</td></tr>
 </table>
 

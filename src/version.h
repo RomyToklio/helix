@@ -1,7 +1,8 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017 The Helix developers
+// Copyright (c) 2018 The Phore developers
+// Copyright (c) 2018-2019 The Helix developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +13,7 @@
  * network protocol versioning
  */
 
-static const int PROTOCOL_VERSION = 80009;
+static const int PROTOCOL_VERSION = 80012;
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 300;
@@ -21,8 +22,8 @@ static const int INIT_PROTO_VERSION = 300;
 static const int GETHEADERS_VERSION = 80000;
 
 //! disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 80004;
-static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 80008;
+static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 80011;
+static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 80012;
 
 static const int MIN_PEER_VERSION_FIXED_SIGTIME = 80008;
 
