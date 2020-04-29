@@ -59,14 +59,15 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (     1, uint256("6103a794040cd5c2a2dce252d49dc01b2e42358cb44bbd3089b040ea8437b25e"))
     (   500, uint256("000000000002576180e507670cbcc6f90110f450a09619969daca80db4c99db2"))
 	(  1000, uint256("0000000000035895b91ae55236883f81cf3fcb62f0d6cadaf49a0eca7ef1e07b"))
-	(  1500, uint256("000000000003c6df13062329c83d55f7e955912454d01dcae9ee03aaa254f303"))	
+	(  1500, uint256("000000000003c6df13062329c83d55f7e955912454d01dcae9ee03aaa254f303"))
 	( 10000, uint256("000000000001cefb823e793c7c27ad4b74feb5990e7f68127a10ef59b9ab19c7"))
 	( 20000, uint256("000000000000b74cbe73924535468a109d00a1d4fc49a7bdffb777c9924e725d"))
 	( 30000, uint256("0000007b6ca741c608a844685480d1765dd1faa7f1c1fc66b780f5663a4d1caf"))
 	( 35000, uint256("0000000000052f6cff8a74737729880fee2030984a2e4b815d8b8913d83a629a"))
-	( 50000, uint256("000000000009cdaeb5cf0ef84355153aa38e942d750e6000d73d04a4ce4e6c9b"))	
+	( 50000, uint256("000000000009cdaeb5cf0ef84355153aa38e942d750e6000d73d04a4ce4e6c9b"))
 	( 75000, uint256("000000000011bc9bfb698c53359f569d92f090b84e814feb96ef00ddf16a0b56"))
 	( 90000, uint256("000000000000e4573d249e86972aebf57ce377d7342d8bbba351c3f331588c4f"))
+	( 90200, uint256("000000000011f7817fb286c514c71f094e1afe391aaa1a915d2631aa2005dd86"))	
 	( 90200, uint256("000000000011f7817fb286c514c71f094e1afe391aaa1a915d2631aa2005dd86"))
 	( 100000, uint256("0fd4901842a3b39ff9dab91afecbf3a9570ad8faf09100a57d539245826b99ca"))
 	( 125000, uint256("1101e508fdf800468630a640b9f928ae21c3dc411bb5606b397bde75b1adaa1f"))
@@ -82,7 +83,15 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 	( 350000, uint256("95dba3af31b2eee5df3e5d4bc87c7860a523a0d1efaea9b5b590ad5f8bb9acea"))
 	( 400000, uint256("f7f411e13a8559b82defd209611b659794ad59a2f10ef0e89630e990dedb5083"))
 	( 425000, uint256("2902ce1f4eed59e3757bfb0116e7eeec6da4264b934ae02bb644235e41a58f3d"))
-	( 450000, uint256("1a22f0fd98f1dd900108c8b5ede8de256dba79596bd781aa0dfb00bf4e2331fd"))	
+	( 450000, uint256("1a22f0fd98f1dd900108c8b5ede8de256dba79596bd781aa0dfb00bf4e2331fd"))
+	( 500000, uint256("3f7e8645f8b40288ef94812ad64fb2b1b6f8d7c5006db521c2f6c4104552acd1"))
+	( 550000, uint256("c86d2d309bbc461cb393958d2d6845fbc82438d73b04a9f5db7bf31a2cddbe1c"))
+	( 600000, uint256("d18555608c63695084e8563e69440ea5f748f93837ff430e8254813bbadb1b66"))
+	( 650000, uint256("0647bd41acf0c9defe91699ca3901ca7cf86be7f528c3fd26b14f9ce2531fd63"))
+	( 700000, uint256("159dc1e73e968a793282f686a3408afe41c72c358019ccb9e22711a66fda77b9"))
+	( 750000, uint256("80a663fb9a25eadb265fa6965f2ff7e6e6217dba9e7a7ff16cc389fe3348423f"))
+	( 800000, uint256("a32bc7b377cc193eb438f5577165e793cf79aa517abe5582d801c6917a553e5a"))
+	( 848572, uint256("a06305f5a6434a7837c6c9e540118a0b3aaca1de162a06bbfb3b6b1cf803306a"))	
 	;
 
 static const Checkpoints::CCheckpointData data = {
@@ -193,11 +202,12 @@ public:
         assert(hashGenesisBlock == uint256("0x79a3c45d6e2760efb4d6de76d34b1f4833ba919bc114e1da0f671b1700a78f08"));
         assert(genesis.hashMerkleRoot == uint256("0x210fa744202cef1c9248d9f82efadaa1387341e5c4b85b7a87ae56866514ef27"));
 
-        vSeeds.push_back(CDNSSeedData("Seed1", "seed1.helix-crypto.nl"));
-        vSeeds.push_back(CDNSSeedData("Seed2", "seed2.helix-crypto.nl"));
-        vSeeds.push_back(CDNSSeedData("Seed3", "seed3.helix-crypto.nl"));
-        vSeeds.push_back(CDNSSeedData("Seed4", "seed4.helix-crypto.nl"));
-        vSeeds.push_back(CDNSSeedData("Seed5", "seed5.helix-crypto.nl"));
+        vSeeds.push_back(CDNSSeedData("Seed1", "crazyseeder.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed2", "seed1.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed3", "seed2.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed4", "seed3.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed5", "seed4.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed6", "seed5.helix-crypto.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40); // Testnet helix addresses start with 'H'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
