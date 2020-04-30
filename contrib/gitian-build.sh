@@ -14,8 +14,8 @@ windows=true
 osx=true
 
 # Other Basic variables
-SIGNER=
-VERSION=
+SIGNER=nathansenn
+VERSION=1.2.2
 commit=false
 url=https://github.com/ProjectHelixCoin/helix
 proc=8
