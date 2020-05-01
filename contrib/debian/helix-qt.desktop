@@ -10,4 +10,4 @@ Type=Application
 Icon=helix128
 MimeType=x-scheme-handler/helix;
 Categories=Office;Finance;
-StartupWMClass=Pivx-qt
+StartupWMClass=Helix-qt

@@ -72,7 +72,7 @@ Automatic zPIV backup has been disabled. Thus, the following configuration optio
 
 ### Stake-Split threshold
 The stake split threshold is no longer required to be integer. It can be a fractional amount. A threshold value of 0 disables the stake-split functionality.
-The default value for the stake-split threshold has been lowered from 2000 PIV, down  to 500 PIV.
+The default value for the stake-split threshold has been lowered from 2000 HLIX, down  to 500 HLIX.
 
 
 Dependencies
@@ -123,7 +123,7 @@ RPC Changes
      "mnsync": true|false,               (boolean) whether masternode data is synced
      "walletunlocked": true|false,       (boolean) whether the wallet is unlocked
      "stakeablecoins": n,                (numeric) number of stakeable UTXOs
-     "stakingbalance": d,                (numeric) PIV value of the stakeable coins (minus reserve balance, if any)
+     "stakingbalance": d,                (numeric) HLIX value of the stakeable coins (minus reserve balance, if any)
      "stakesplitthreshold": d,           (numeric) value of the current threshold for stake split
      "lastattempt_age": n,               (numeric) seconds since last stake attempt
      "lastattempt_depth": n,             (numeric) depth of the block on top of which the last stake attempt was made
