@@ -2,7 +2,8 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017 The Helix developers
+// Copyright (c) 2017-2018 The Phore developers
+// Copyright (c) 2018-2019 The Helix developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -90,15 +91,15 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 	( 700000, uint256("159dc1e73e968a793282f686a3408afe41c72c358019ccb9e22711a66fda77b9"))
 	( 750000, uint256("80a663fb9a25eadb265fa6965f2ff7e6e6217dba9e7a7ff16cc389fe3348423f"))
 	( 800000, uint256("a32bc7b377cc193eb438f5577165e793cf79aa517abe5582d801c6917a553e5a"))
-	( 848572, uint256("a06305f5a6434a7837c6c9e540118a0b3aaca1de162a06bbfb3b6b1cf803306a"))
+	( 848572, uint256("a06305f5a6434a7837c6c9e540118a0b3aaca1de162a06bbfb3b6b1cf803306a"))	
 	;
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    0, // * UNIX timestamp of last checkpoint block
-    0,     // * total number of transactions between genesis and last checkpoint
+    1552125921, // * UNIX timestamp of last checkpoint block
+    446515,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    1500        // * estimated number of transactions per day after checkpoint
+    1440        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -201,8 +202,12 @@ public:
         assert(hashGenesisBlock == uint256("0x79a3c45d6e2760efb4d6de76d34b1f4833ba919bc114e1da0f671b1700a78f08"));
         assert(genesis.hashMerkleRoot == uint256("0x210fa744202cef1c9248d9f82efadaa1387341e5c4b85b7a87ae56866514ef27"));
 
-//        vSeeds.push_back(CDNSSeedData("0", "dns0.helix.io")); // run by Moonshot
-//        vSeeds.push_back(CDNSSeedData("1", "helix.seed.rho.industries")); // run by Julian Meyer (meyer9)
+        vSeeds.push_back(CDNSSeedData("Seed1", "crazyseeder.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed2", "seed1.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed3", "seed2.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed4", "seed3.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed5", "seed4.helix-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("Seed6", "seed5.helix-crypto.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40); // Testnet helix addresses start with 'H'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);

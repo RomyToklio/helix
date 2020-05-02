@@ -367,7 +367,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     privacyIcon.addFile(":/icons/privacy_off",QSize(40,40),QIcon::Normal,QIcon::Off);
 
     privacyAction = new QAction(QIcon(":/icons/privacy"), tr("&Privacy"), this);
-    privacyAction->setStatusTip(tr("Privacy Actions for zPHR"));
+    privacyAction->setStatusTip(tr("Privacy Actions for zHLIX"));
     privacyAction->setToolTip(privacyAction->statusTip());
     privacyAction->setCheckable(true);
     privacyAction->setIcon(privacyIcon);
