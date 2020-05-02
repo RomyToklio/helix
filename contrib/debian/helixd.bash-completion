@@ -1,1 +1,2 @@
 contrib/helixd.bash-completion	helixd
+contrib/helix-cli.bash-completion helix-cli
