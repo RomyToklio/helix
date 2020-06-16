@@ -458,7 +458,7 @@ void InterruptHTTPServer()
 {
     LogPrint("http", "Interrupting HTTP server\n");
     if (eventHTTP) {
-        BOOST_FOREACH (evhttp_bound_socket *socket, boundSockets) {
+        for (evhttp_bound_socket *socket : boundSockets) {
             evhttp_del_accept_socket(eventHTTP, socket);
         }
         evhttp_set_gencb(eventHTTP, http_reject_request_cb, NULL);
