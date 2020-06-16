@@ -215,7 +215,7 @@ public:
     /// Create options model
     void createOptionsModel();
     /// Create main window
-    void createWindow(const NetworkStyle* networkStyle);
+    bool createWindow(const NetworkStyle* networkStyle);
     /// Create splash screen
     void createSplashScreen(const NetworkStyle* networkStyle);
 	/// Get mnemonic words on first startup
