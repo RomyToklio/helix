@@ -77,6 +77,8 @@ public:
      * this is sorted by sha256.
      */
     QList<TransactionRecord> cachedWallet;
+    bool hasZcTxes = false;
+
 
     /* Query entire wallet anew from core.
      */
