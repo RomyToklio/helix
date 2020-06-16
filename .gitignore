@@ -38,6 +38,7 @@ confdefs.h
 conftest.cpp
 conftest.err
 libtool
+.vscode
 src/config/helix-config.h
 src/config/helix-config.h.in
 src/config/stamp-h1
