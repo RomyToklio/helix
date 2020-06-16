@@ -185,7 +185,7 @@
     </layout>
   </widget>
   <resources>
-    <include location="../phore.qrc"/>
+    <include location="../helix.qrc"/>
   </resources>
   <connections>
     <connection>
