@@ -3807,7 +3807,7 @@ DBErrors CWallet::LoadWallet(bool& fFirstRunRet)
         if (CDB::Rewrite(strWalletFile, "\x04pool")) {
             LOCK(cs_wallet);
             setInternalKeyPool.clear();
-            setExternalKeyPool.clear();    
+            setExternalKeyPool.clear();            // Note: can't top-up keypool here, because wallet is locked.
             // User will be prompted to unlock wallet the next operation
             // the requires a new key.
         }
@@ -4011,6 +4011,8 @@ void CWallet::ReserveKeyFromKeyPool(int64_t& nIndex, CKeyPool& keypool, bool fIn
         if (!IsLocked())
             TopUpKeyPool();
 
+        fInternal = fInternal && IsHDEnabled();
+        std::set<int64_t>& setKeyPool = set_pre_split_keypool.empty() ? (fInternal ? setInternalKeyPool : setExternalKeyPool) : set_pre_split_keypool;
         // Get the oldest key
         if (setKeyPool.empty())
             return;
