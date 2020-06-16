@@ -283,8 +283,8 @@ libbitcoin_wallet_a_SOURCES = \
   primitives/deterministicmint.cpp \
   primitives/zerocoin.cpp \
   kernel.cpp \
-  zhilxwallet.cpp \
-  zhilxtracker.cpp \
+  zhlixwallet.cpp \
+  zhlixtracker.cpp \
   wallet/crypter.cpp \
   wallet/db.cpp \
   wallet/rpcdump.cpp \
