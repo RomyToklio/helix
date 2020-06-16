@@ -192,8 +192,8 @@ BITCOIN_CORE_H = \
   validationinterface.h \
   utilsplitstring.h \
   version.h \
-  zphrtracker.h \
-  zphrwallet.h \
+  zhlixtracker.h \
+  zhlixwallet.h \
   wallet/arrayslice.h \
   wallet/bip39_english.h \
   wallet/bip39.h \
