@@ -12,7 +12,8 @@
 
 #include "amount.h"
 #include "primitives/transaction.h"
-#include "db.h"
+#include "wallet/db.h"
+#include "wallet/hdchain.h"
 #include "key.h"
 #include "keystore.h"
 #include "primitives/zerocoin.h"
@@ -157,6 +158,12 @@ public:
     static bool Recover(CDBEnv& dbenv, std::string filename, bool fOnlyKeys);
     static bool Recover(CDBEnv& dbenv, std::string filename);
 
+    //! write the hdchain model (external chain child index counter)
+    bool WriteHDChain(const CHDChain& chain);
+    bool WriteCryptedHDChain(const CHDChain& chain);
+    bool WriteHDPubKey(const CHDPubKey& hdPubKey, const CKeyMetadata& keyMeta);
+
+    
     bool WriteDeterministicMint(const CDeterministicMint& dMint);
     bool ReadDeterministicMint(const uint256& hashPubcoin, CDeterministicMint& dMint);
     bool EraseDeterministicMint(const uint256& hashPubcoin);
