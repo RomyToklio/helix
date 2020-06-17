@@ -1,8 +1,8 @@
 ---
-name: "helix-aarch64-1.2"
+name: "helix-aarch64-1.6"
 enable_cache: true
 suites:
-- "xenial"
+- "bionic"
 architectures:
 - "amd64"
 packages:
@@ -25,7 +25,7 @@ packages:
 - "python"
 reference_datetime: "2015-06-01 00:00:00"
 remotes:
-- "url": "https://github.com/projecthelixcoin/helix.git"
+- "url": "https://github.com/ProjectHelixCoin/helix"
   "dir": "helix"
 files: []
 script: |
