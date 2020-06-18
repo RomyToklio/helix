@@ -86,7 +86,7 @@ src/leveldb/build_config.mk
 *.qm
 Makefile
 helix-qt
-helix-Qt.app
+Helix-Qt.app
 
 # Unit-tests
 Makefile.test
