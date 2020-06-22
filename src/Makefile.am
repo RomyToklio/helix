@@ -87,7 +87,7 @@ if BUILD_BITCOIN_UTILS
   bin_PROGRAMS += helix-cli helix-tx
 endif
 
-.PHONY: FORCE check-symbols check-security
+.PHONY: FORCE
 # helix core #
 BITCOIN_CORE_H = \
   activemasternode.h \
@@ -563,17 +563,6 @@ clean-local:
 	## FIXME: How to get the appropriate modulename_CPPFLAGS in here?
 	$(AM_V_GEN) $(WINDRES) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(CPPFLAGS) -DWINDRES_PREPROC -i $< -o $@
 
-check-symbols: $(bin_PROGRAMS)
-if GLIBC_BACK_COMPAT
-	@echo "Checking glibc back compat..."
-	$(AM_V_at) READELF=$(READELF) CPPFILT=$(CPPFILT) $(PYTHON) $(top_srcdir)/contrib/devtools/symbol-check.py < $(bin_PROGRAMS)
-endif
-
-check-security: $(bin_PROGRAMS)
-if HARDEN
-	@echo "Checking binary security..."
-	$(AM_V_at) READELF=$(READELF) OBJDUMP=$(OBJDUMP) $(PYTHON) $(top_srcdir)/contrib/devtools/security-check.py < $(bin_PROGRAMS)
-endif
 
 %.pb.cc %.pb.h: %.proto
 	@test -f $(PROTOC)
@@ -590,3 +579,4 @@ endif
 if ENABLE_QT_TESTS
 include Makefile.qttest.include
 endif
+
