@@ -1,0 +1,14 @@
+Making all in src
+make[1] : on entre dans le répertoire « /home/redip/romain/helix/src »
+make[2] : on entre dans le répertoire « /home/redip/romain/helix/src »
+make[3] : on entre dans le répertoire « /home/redip/romain/helix/src/secp256k1 »
+make[3]: *** Aucune règle pour fabriquer la cible « libsecp256k1.la ». Arrêt.
+make[3] : on quitte le répertoire « /home/redip/romain/helix/src/secp256k1 »
+Makefile:9122 : la recette pour la cible « secp256k1/libsecp256k1.la » a échouée
+make[2]: *** [secp256k1/libsecp256k1.la] Erreur 2
+make[2] : on quitte le répertoire « /home/redip/romain/helix/src »
+Makefile:8623 : la recette pour la cible « all-recursive » a échouée
+make[1]: *** [all-recursive] Erreur 1
+make[1] : on quitte le répertoire « /home/redip/romain/helix/src »
+Makefile:703 : la recette pour la cible « all-recursive » a échouée
+make: *** [all-recursive] Erreur 1

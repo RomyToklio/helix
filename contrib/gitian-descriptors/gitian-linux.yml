@@ -24,7 +24,6 @@ packages:
 - "gcc-8-multilib"
 - "binutils-gold"
 - "git"
-- "gperf"
 - "pkg-config"
 - "autoconf"
 - "libtool"
